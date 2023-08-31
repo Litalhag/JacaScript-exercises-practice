@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/kzh3yrd.css" />
+    <title>RPG-Game</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel=“stylesheet” href=“https://use.typekit.net/kzh3yrd.css” />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Architects+Daughter&family=Dosis:wght@300;400&family=Lato&family=Montserrat:wght@500&family=Open+Sans:wght@300;400&family=Quicksand:wght@400;500&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="lobby">
+      <div class="modal">
+        <!-- Navbar -->
+        <div class="just-flex navbar">
+          <button id="back-btn">
+            <img src="./assets/modal-header/Back-Button.png" alt="" />
+          </button>
+          <button id="my-account" class="login-btn-top">MY ACCOUNT</button>
+          <button id="my-stats" class="login-btn-top">MY STATS</button>
+        </div>
+
+        <!--Header -->
+        <div class="flex-end-bottom modal-header">
+          <!--Left Header -->
+          <div class="left-square-icon">
+            <div class="icon-choice">
+              <img src="./assets/modal-header/guest-icon.png" alt="" />
+            </div>
+            <div class="icon-char">GUEST</div>
+          </div>
+          <!--Right Header  -->
+          <div class="right-header">
+            <div class="gun">
+              <img src="./assets/modal-header/Gun Overhang.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-align-center modal-showcase">
+          <form class="modal-form" id="modal-form">
+            <div class="form-contents">
+              <div class="input-type-div">
+                <label>NICKNAME</label>
+                <input
+                  type="text"
+                  id="nicknameInput"
+                  placeholder="This will be your screen name"
+                />
+                <div class="error-message" id="nicknameInputError"></div>
+              </div>
+              <div class="input-type-div">
+                <label>EMAIL ADDRESS</label>
+                <input
+                  type="email"
+                  id="emailInput"
+                  placeholder="Enter valid email address"
+                />
+                <div class="error-message" id="emailInputError"></div>
+              </div>
+
+              <div class="input-type-div">
+                <label>PASSWORD</label>
+                <div class="input-container">
+                  <span class="input-icon">
+                    <img src="./assets/icons/Vector-eye.png" alt="" />
+                  </span>
+                  <input
+                    type="password"
+                    class="custom-input"
+                    placeholder="AHHkhsldlfo888"
+                    id="passwordInput"
+                  />
+                </div>
+                <div class="error-message" id="passwordInputError"></div>
+                <ul class="horizontal-list">
+                  <li id="password-list-spc-chr">Special Characters</li>
+                  <li id="password-list-caps">Caps</li>
+                  <li id="password-list-lowercase">Lowercase</li>
+                  <li id="password-list-numbers">Numbers</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="btn-container">
+              <button type="submit" class="primary-btn green-button">
+                CREATE ACCOUNT
+              </button>
+            </div>
+          </form>
+
+          <div class="modal-avatar">
+            <label>AVATAR</label>
+            <div class="flex-align-justify-center modal-avatar-style">
+              <div class="grid-images">
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-1.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-2.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-3.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-4.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-5.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-6.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-7.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-8.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-9.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-10.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-coming-soon.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-coming-soon.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+                <div class="images-box">
+                  <img
+                    src="assets/rectangles/Rectangle-coming-soon.png"
+                    alt="Image 2"
+                    class="scaled-image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

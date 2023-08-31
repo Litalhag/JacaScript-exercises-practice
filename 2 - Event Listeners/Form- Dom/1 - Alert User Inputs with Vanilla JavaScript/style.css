@@ -1,0 +1,436 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  /* The default font size of the browser is 16px, so if we want 1rem to be equal to 10px, we divide 10px by 16px = 62.5% */
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background: gray;
+  font-family: "hwt-artz", sans-serif;
+  font-size: 2rem;
+  color: gray;
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* @media only screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+} */
+
+/* vars */
+:root {
+  --gray-one: #757575;
+  --cream-gray: #d9d9d9;
+  --royal-blue: #266cd7;
+  --mustard-yellow: #d7ba26;
+  --green: #26d74d;
+  --pink: #d726d0;
+  --red: #d72626;
+  --purple: #9326d7;
+  --black: #000;
+  --white: #fff;
+  --max-width: 100vw;
+  --max-height: 100vh;
+  --modal-width: 88.8rem;
+  --modal-height: 77.7rem;
+  --modal-left-right-margin: 51.6rem;
+  --modal-margin-top: 15.1rem;
+  --modal-margin-bottom: 15.2rem;
+}
+
+/* btn utility */
+.primary-btn {
+  display: inline-block;
+  border-radius: 0.8rem;
+  text-align: center;
+  line-height: 5rem;
+  text-decoration: none;
+  border: 0.4rem solid black;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0px 0.3rem 0.1rem rgba(0, 0, 0, 0.7);
+  font-family: "hwt-artz";
+  line-height: 3.6rem;
+  letter-spacing: 0.09rem;
+}
+
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  border-radius: 0.6rem;
+  filter: blur(0.1rem);
+  z-index: -1;
+}
+
+/* flex utility */
+.just-flex {
+  display: flex;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify-content {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-align-justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-end-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main classes */
+.lobby {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--max-width);
+  max-height: var(--max-height);
+}
+
+.modal {
+  background: var(--white);
+  width: var(--modal-width);
+  height: var(--modal-height);
+  margin-top: var(--modal-margin-top);
+  margin-bottom: var(--modal-margin-bottom);
+  overflow: hidden;
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "header-img"
+    "header-img"
+    "header-img"
+    "showcase"
+    "showcase"
+    "showcase"
+    "showcase"
+    "showcase"
+    "showcase"
+    "modal-account"
+    "modal-account";
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 1rem 1rem 4rem 0 rgba(0, 0, 0, 0.35);
+}
+
+/* navbar */
+.navbar {
+  grid-area: navbar;
+  height: 4rem;
+  width: 100%;
+  background-color: var(--black);
+}
+
+.login-btn-top {
+  font-family: "hwt-artz", sans-serif;
+  text-align: right;
+  text-shadow: 0px 2px 0px #000;
+  font-size: 2.4rem;
+  font-style: normal;
+  line-height: normal;
+}
+
+#my-account {
+  color: var(--white);
+  margin-right: 1.5rem;
+  margin-left: 1.69rem;
+  -webkit-text-stroke: black 0.85px;
+}
+
+#my-stats {
+  color: var(--gray-one);
+  margin-left: 1.5rem;
+  -webkit-text-stroke: black 0.85px;
+}
+
+#back-btn {
+  z-index: 1;
+  width: 7.1rem;
+  height: 6rem;
+  margin-top: 0.2rem;
+}
+
+/* Header */
+.modal-header {
+  grid-area: header-img;
+  background: url("./assets/modal-header/complete_header.png");
+  height: 23.7rem;
+  position: relative;
+}
+
+.gun {
+  display: block;
+  position: absolute;
+  right: 14.8rem;
+  top: 22.9rem;
+}
+
+.left-square-icon {
+  position: absolute;
+  z-index: 1;
+  width: 13rem;
+  height: 13rem;
+  border: var(--black) 0.5rem solid;
+  background: var(--royal-blue);
+  top: 14.4rem;
+  margin-left: 5.4rem;
+  margin-right: 70.4;
+}
+
+.icon-choice {
+  position: relative;
+  z-index: 1;
+  height: 7.3rem;
+}
+
+.icon-choice img {
+  position: absolute;
+  margin-left: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.icon-char {
+  z-index: 1;
+  position: absolute;
+  font-family: "hwt-artz", sans-serif;
+  color: var(--white);
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: -0.25rem -0.25rem 0.2rem #000, 0.25rem 0.25rem 0.2rem #000;
+  -webkit-text-stroke: black 0.1rem;
+  font-size: 3.6rem;
+  margin-left: 2.3rem;
+  margin-top: 3rem;
+}
+
+/* showcase */
+.modal-showcase {
+  display: flex;
+  grid-area: showcase;
+  height: 42rem;
+  gap: 7.3rem;
+  width: 100%;
+  background-color: white;
+}
+
+.btn-container {
+  position: absolute;
+  right: -30rem;
+  top: 30rem;
+}
+
+.modal-avatar {
+  margin-top: 8rem;
+}
+
+.modal-avatar-style {
+  width: 41rem;
+  height: 25.7rem;
+  margin-bottom: 1rem;
+}
+
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  grid-gap: 10px; /* Adjust the gap between images */
+}
+
+.images-box {
+  cursor: pointer;
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: #f0f0f0;
+}
+
+.scaled-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale image to fit the container while maintaining aspect ratio */
+}
+
+.modal-account {
+  height: 14.7rem;
+  width: 100%;
+  grid-area: modal-account;
+  background-color: white;
+}
+
+/* showcase form */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  margin-left: 4rem;
+  gap: 1.5rem;
+  height: 29rem;
+  position: relative;
+}
+
+.form-contents {
+  flex-grow: 1;
+}
+
+input {
+  width: 32rem;
+  height: 5rem;
+  flex-shrink: 0;
+  background-color: var(--cream-gray);
+  border: none;
+}
+
+::placeholder {
+  color: #8f8f8f;
+  font-family: "Open Sans";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  padding: 1.3rem 7.6rem 1.2rem 1.3rem;
+}
+
+#passwordInput::placeholder {
+  color: var(--red);
+  font-family: "Open sans";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+label {
+  color: var(--black);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0.5rem;
+}
+
+/* This one is actually a utility btw */
+.input-type-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: var(--red);
+  display: none; /* Hidden by default */
+}
+
+.error-input {
+  border: 2px solid var(--red) !important; /* Adjust as needed */
+}
+
+.input-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  top: 54%;
+  left: 28rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.horizontal-list {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.horizontal-list li {
+  list-style-type: disc;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#password-list-spc-chr {
+  color: var(--red);
+}
+#password-list-caps,
+#password-list-lowercase,
+#password-list-numbers {
+  color: #32a709;
+}
+
+/* button */
+.green-button {
+  background: linear-gradient(to bottom, #66fa73, #0d8011);
+  color: var(--white);
+  /* margin-left: 21rem; */
+  width: 23.6rem;
+  height: 5rem;
+  font-size: 3rem;
+  text-shadow: 0.08rem 0rem 0rem rgb(0, 0, 0),
+    0.05657rem 0.05657rem 0rem rgb(0, 0, 0), 0rem 0.08rem 0rem rgb(0, 0, 0),
+    -0.05657rem 0.05657rem 0rem rgb(0, 0, 0), -0.08rem 0rem 0rem rgb(0, 0, 0),
+    -0.05657rem -0.05657rem 0rem rgb(0, 0, 0), 0rem -0.08rem 0rem rgb(0, 0, 0),
+    0.05657rem -0.05657rem 0rem rgb(0, 0, 0);
+}
+
+.green-button::before {
+  background: linear-gradient(to bottom, #3dbe42, #3bb827);
+  width: 22.9rem;
+  height: 3.5rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  left: 0;
+  right: 0;
+}
