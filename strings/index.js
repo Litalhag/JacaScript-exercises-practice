@@ -1,20 +1,20 @@
 // Exercise 1:
 function toTitleCase(name) {
-  let lowercaseName = name.toLowerCase(); // lower all string's chars
-  let words = lowercaseName.split(" "); //split words into an array
+  let lowercaseName = name.toLowerCase() // lower all string's chars
+  let words = lowercaseName.split(' ') //split words into an array
   for (let i = 0; i < words.length; i++) {
-    let word = words[i]; // word = each word in an array
-    capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+    let word = words[i] // word = each word in an array
+    capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1)
     // capitalizedWord = first char in each word in array & make upper + create a new array
-    words[i] = capitalizedWord;
-    console.log(words[i]);
+    words[i] = capitalizedWord
+    console.log(words[i])
   }
 
-  let titleCaseName = words.join(" "); // returns the array as a string
-  return titleCaseName;
+  let titleCaseName = words.join(' ') // returns the array as a string
+  return titleCaseName
 }
 
-console.log(toTitleCase("Iron Warrior")); // Output: "Iron Warrior"
+console.log(toTitleCase('Iron Warrior')) // Output: "Iron Warrior"
 // -----------------------------------------------------------------------------------------------
 // split = splits a string into an array of substrings
 // charAt = returns the character at a specified index (position) in a string
@@ -23,21 +23,21 @@ console.log(toTitleCase("Iron Warrior")); // Output: "Iron Warrior"
 // -----------------------------------------------------------------------------------------------
 // Exercise 2:
 function searchInventory(inventory, query) {
-  let inventoryItems = [];
+  let inventoryItems = []
 
   for (let i = 0; i < inventory.length; i++) {
-    item = inventory[i];
-    console.log(item);
+    item = inventory[i]
+    console.log(item)
     if (item.includes(query)) {
-      inventoryItems.push(item);
+      inventoryItems.push(item)
     }
   }
-  return inventoryItems;
+  return inventoryItems
 }
 
 console.log(
-  searchInventory(["Iron Sword", "Healing Potion", "Steel Shield"], "Iron")
-);
+  searchInventory(['Iron Sword', 'Healing Potion', 'Steel Shield'], 'Iron')
+)
 // -----------------------------------------------------------------------------------------------
 // includes = returns true if a string contains a specified string
 // push = adds new items to the end of an array
@@ -47,78 +47,78 @@ console.log(
 // -----------------------------------------------------------------------------------------------
 // Exercise 3:
 function formatNPCName(name) {
-  let newName = name.split(", ");
-  let formattedName = `${newName[1]} ${newName[0]}`;
-  return formattedName;
+  let newName = name.split(', ')
+  let formattedName = `${newName[1]} ${newName[0]}`
+  return formattedName
 }
 
-console.log(formatNPCName("Goblin, Grunty"));
+console.log(formatNPCName('Goblin, Grunty'))
 // -----------------------------------------------------------------------------------------------
 // parseInt = parses a value as a string and returns the first integer. returns only a number
 // -----------------------------------------------------------------------------------------------
 // Exercise 4:
 function parseDuration(duration) {
-  const splitStr = duration.split(" "); //['3h', '45minutes']
-  const hours = splitStr[0]; // '3h'
-  const minutes = splitStr[1]; // '45min
+  const splitStr = duration.split(' ') //['3h', '45minutes']
+  const hours = splitStr[0] // '3h'
+  const minutes = splitStr[1] // '45min
 
   return {
     hours: parseInt(hours),
     minutes: parseInt(minutes),
-  };
+  }
 }
 
-console.log(parseDuration("3h 45min"));
+console.log(parseDuration('3h 45min'))
 
 // input: "3h 45min"
 //output// {hours: 3, minutes: 45}
 // -----------------------------------------------------------------------------------------------
 // Exercise 5:
 function getGameAcronym(title) {
-  const titleArr = title.split(" "); //[ 'Epic', 'Fantasy', 'Battle']
-  const newTitle = titleArr.map((word) => word[0]); // CR  - don't write 'e' - give more meaningful name
-  const upperNewTitle = newTitle.join(" ").toUpperCase();
+  const titleArr = title.split(' ') //[ 'Epic', 'Fantasy', 'Battle']
+  const newTitle = titleArr.map((word) => word[0]) // CR  - don't write 'e' - give more meaningful name
+  const upperNewTitle = newTitle.join(' ').toUpperCase()
 
-  return upperNewTitle;
+  return upperNewTitle
 }
 
-console.log(getGameAcronym("Epic Fantasy Battle"));
+console.log(getGameAcronym('Epic Fantasy Battle'))
 // -----------------------------------------------------------------------------------------------
 // Exercise 6:
 // input = { name: "Iron Warrior", class: "Warrior", level: 10 };
 function getCharacterDetails(character) {
-  let arr = [];
+  let arr = []
   for (let key in character) {
     // arr.push([key, character[key]]);
-    arr.push(`${key}: ${character[key]}`); // push = adds new items to the end of an array
+    arr.push(`${key}: ${character[key]}`) // push = adds new items to the end of an array
   }
 
-  let str = arr.join(", ");
-  return str;
+  let str = arr.join(', ')
+  return str
 }
 
 console.log(
-  getCharacterDetails({ name: "Iron Warrior", class: "Warrior", level: 10 })
-);
+  getCharacterDetails({ name: 'Iron Warrior', class: 'Warrior', level: 10 })
+)
 // -----------------------------------------------------------------------------------------------
 // Exercise 7:
 function createSlug(location) {
-  let str = location.toLowerCase();
-  let finalStr = str.replace(" ", "-"); // CR - you could לשרשר this to the previous line and return it - like this:
+  let str = location.toLowerCase()
+  let finalStr = str.replace(' ', '-') // CR - you could לשרשר this to the previous line and return it - like this:
 
-  return finalStr; // CR - return location.toLowerCase()..replace(" ", "-");
+  return finalStr // CR - return location.toLowerCase()..replace(" ", "-");
 }
 
-console.log(createSlug("Dark Forest"));
+console.log(createSlug('Dark Forest'))
 // -----------------------------------------------------------------------------------------------
 // Exercise 8:
 function trimDescription(description, maxLength) {
   if (description.length <= maxLength) {
-    return description;
+    return description
   } else {
-    const lastSpaceIndex = description.lastIndexOf(" ", maxLength + 2); // to find the last space char
-    const trimmedDescription = description.slice(0, lastSpaceIndex);
-    return trimmedDescription.concat("..");
+    const lastSpaceIndex = description.lastIndexOf(' ', maxLength + 2) // to find the last space char
+    const trimmedDescription = description.slice(0, lastSpaceIndex)
+    return trimmedDescription.concat('..')
   }
 }
 
@@ -127,15 +127,15 @@ console.log(
     "Retrieve the sacred artifact from the dragon's lair. But beware, the dragon is cunning and powerful.",
     50
   )
-);
+)
 //"Retrieve the sacred artifact from the dragon's lair. But beware, the dragon is cunning and powerful."
 // -----------------------------------------------------------------------------------------------
 // Exercise 9:
 function splitMonsters(monsters) {
-  return (monstersArray = monsters.split(", "));
+  return (monstersArray = monsters.split(', '))
 }
 
-console.log(splitMonsters("Goblin, Orc, Dragon"));
+console.log(splitMonsters('Goblin, Orc, Dragon'))
 // -----------------------------------------------------------------------------------------------
 // Exercise 10:
 // a = 1, e = 2,
